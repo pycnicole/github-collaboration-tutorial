@@ -1,0 +1,301 @@
+\documentclass[12pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{comment}
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\setbeamertemplate{enumerate items}[default]
+\AtBeginSection[]{
+  \begin{frame}
+  	\vfill\centering
+  	\usebeamerfont{title}\insertsectionhead\par%
+  	\vfill
+  	% \vspace{8pt}
+  	% \hrule
+  \end{frame}
+}
+
+\title[Git Tutorial]{Git \& GitHub: A Beginner's Guide for Research Collaboration}
+\author{Chiatse Wang}
+\institute[ISS AS]{Institute of Statistical Science, Academia Sinica}
+\date{April 24, 2025}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Main Takeaways}
+  \begin{itemize}
+    \setlength\itemsep{1em}
+    \item Learn how to manage projects and collaborate effectively using GitHub.
+    \item Explore a real-world scenario through a hands-on demo.
+    \item All materials are available at: \url{https://github.com/chiatsewang/github-collaboration-tutorial}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+% Introduction
+\begin{frame}
+  \frametitle{Introduction}
+  \begin{itemize}
+    \setlength\itemsep{1em}
+    \item Git is a distributed version control system.
+    \item Cloud-based Git services (e.g., GitHub, GitLab, Bitbucket) are used for collaboration and backup.
+  \end{itemize}
+\end{frame}
+
+% Version control
+\begin{frame}
+  \frametitle{Version Control}
+
+  Version control maintains a history of changes in code and data.
+  \begin{itemize}
+    \setlength\itemsep{1em}
+    \item No more file or projects like \texttt{code\_final\_v2.py} or \texttt{proj\_20250425}.
+  \end{itemize}
+  
+  \vspace{1em}
+  \textbf{Why is version control important?}
+  \vspace{1em}
+
+  \begin{enumerate}
+    \setlength\itemsep{1em}
+    \item Track issues and bugs; backtrack or audit changes when needed.
+    \item Manage multiple versions of a project with ease.
+    \item Reproduce results consistently and reliably.
+    \item Collaborate seamlessly with others.
+  \end{enumerate}
+\end{frame}
+
+\section{Git Basics}
+
+\begin{frame}
+  \frametitle{Git Overview}
+  \begin{enumerate}
+    \setlength\itemsep{1em}
+    \item The concepts of staging and branching are fundamental.
+    \item A commit represents a snapshot of your project at a specific point in time.
+    \item The basic unit of a Git project is a repository, which contains all commits and branches.
+    \item Git tracks changes in files and directories over time.
+    \item Merging two branches combines their changes into one.
+  \end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}{Branching in Git}
+  \begin{itemize}
+      \item A \textbf{branch} is a lightweight movable pointer to a commit.
+      \item The default branch is usually \texttt{main} or \texttt{master}.
+      \item You can create new branches to develop features independently.
+  \end{itemize}
+  \pause
+  \begin{block}{Common Usage}
+  \begin{itemize}
+      \item \texttt{git branch feature-x} – create a new branch
+      \item \texttt{git switch feature-x} – switch to a branch
+      \item \texttt{git merge feature-x} – merge changes into current branch
+  \end{itemize}
+  \end{block}
+  \pause
+  \textbf{Why use branches?}
+  \begin{itemize}
+      \item Isolate development
+      \item Parallel feature development
+      \item Safe experimentation
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Git Basics: Working Directory, Staging Area, Repository}
+  \begin{itemize}
+      \item \textbf{Working Directory}: Your local project folder. Files here can be edited freely.
+      \item \textbf{Staging Area (Index)}: A holding area for changes you want to include in the next commit.
+      \item \textbf{Repository (Local)}: A database where Git permanently stores all versions of your project.
+  \end{itemize}
+  \vspace{1em}
+  \begin{block}{Workflow}
+  \texttt{working directory} $\rightarrow$ \texttt{staging area} $\rightarrow$ \texttt{repository}
+  \end{block}
+  \begin{itemize}
+      \item Use \texttt{git add} to move changes to staging
+      \item Use \texttt{git commit} to record changes to the repository
+  \end{itemize}
+  \end{frame}
+
+\begin{frame}{Essential Git Commands}
+    \begin{itemize}
+      \item \texttt{git init}
+      \item \texttt{git status}
+      \item \texttt{git add}
+      \item \texttt{git commit}
+      \item \texttt{git log}
+      \item \texttt{git diff}
+    \end{itemize}
+  \end{frame}
+
+
+\section{GitHub Collaboration Best Practices}
+
+\begin{frame}
+  \frametitle{A Good Repository}
+  About collaboration.
+  Good commit message.
+  Branching strategy.
+  LICENSE and README.
+  Release.
+  Issues for discussion and Pull Requests.
+  \begin{itemize}
+    \item Use a clear and consistent naming convention for branches.
+    \item Use meaningful commit messages.
+    \item Keep commits small and focused.
+    \item Use pull requests for code review and discussion.
+    \item Use issues to track bugs and feature requests.
+    \item Use tags to mark releases.
+    \item Use a README file to document your project.
+    \item Use a LICENSE file to specify the terms of use.
+    \item Use a .gitignore file to exclude files from version control.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Writing Good Commits}
+  \begin{itemize}
+    \item Start with a clear subject line with suffix \texttt{[feat]}, \texttt{[fix]}, \texttt{[docs]}, etc.
+    \item Optionally add body for details
+    \item Use present tense, imperative mood
+    \item Example: \texttt{\detokenize{[feat] Add data loader for experiment A}}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{README and LICENSE}
+  \begin{itemize}
+    \item \texttt{README.md}: project overview, usage, setup
+    \item \texttt{LICENSE}: choose open source license (MIT, Apache 2.0, GPL...)
+    \item Helps others use and contribute to your code
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Typical GitHub Workflow}
+  \begin{enumerate}
+    \item Clone or fork a repository
+    \item Create a new branch
+    \item Make changes and commit
+    \item Push to GitHub
+    \item Open a Pull Request
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Branching Strategy}
+  \begin{itemize}
+    \item \texttt{main} — the stable, production-ready branch
+    \item \texttt{dev} — the main development branch
+    \item Branch naming convention: \texttt{account\_name/feature/feature-name}, \texttt{bugfix/bug-name}
+    \item Feature branches should be short-lived and task-specific
+    \item Use \texttt{git merge} or \texttt{git rebase} to integrate changes
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{What is a Pull Request?}
+\begin{itemize}
+    \item A \textbf{Pull Request (PR)} is a request to merge one branch into another on GitHub.
+    \item Usually from a contributor’s feature branch into the main repository branch.
+    \item Enables code review, discussion, and collaboration before merging.
+\end{itemize}
+\vspace{1em}
+\textbf{Typical Workflow}
+\begin{enumerate}
+    \item Fork a repository
+    \item Create a new branch and commit changes
+    \item Push changes to your fork
+    \item Open a pull request on GitHub
+    \item Collaborators review and merge
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Pull Request Review Process}
+  \begin{itemize}
+    \item Reviewers can comment, request changes, or approve the PR.
+    \item Use comments to discuss code changes and suggest improvements.
+    \item Once approved, the PR can be merged into the main branch.
+  \end{itemize}
+  \pause
+  \textbf{Best Practices}
+  \begin{itemize}
+    \item Keep PRs small and focused.
+    \item Provide context in the PR description.
+    \item Respond to feedback promptly.
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}
+  \textbf{Example PR Workflow}
+
+  \begin{itemize}
+    \item Create a new branch for your feature.
+    \item Make changes and commit them.
+    \item Push the branch to GitHub.
+    \item Open a PR against the main branch.
+    \item Review and address comments.
+    \item Merge the PR once approved.
+    \item Delete the branch after merging.
+  \end{itemize}
+\end{frame}
+
+\section{Hands-on Demo}
+\begin{frame}{Tutorial Instructions}
+    \begin{itemize}
+        \item All activities will be performed on GitHub Web Interface — no local Git installation required.
+        \item Make sure you're logged in to your GitHub account.
+        \item You will be asked to:
+        \begin{enumerate}
+            \item Fork a repository
+            \item Create a branch
+            \item Make commits with meaningful messages
+            \item Submit a Pull Request (PR)
+            \item Respond to review requests
+            \item Complete a merge
+        \end{enumerate}
+        \item Don’t worry — we’ll guide you step-by-step!
+    \end{itemize}
+    
+    \vspace{1em}
+    \centering
+    \textit{Let’s get hands-on and have fun with version control!}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Resources}
+  \begin{itemize}
+    \setlenght\itemsep{1em}
+    \item \href{https://git-scm.com/doc}{git-scm.com/doc}
+    \item \href{https://docs.github.com}{docs.github.com}
+    \item \href{https://opensource.guide/}{opensource.guide}
+    \item \href{https://choosealicense.com}{choosealicense.com}
+    \item \href{https://www.conventionalcommits.org/en/v1.0.0/}{conventionalcommits.org}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Thank You!}
+  Questions? \newline
+  \small GitHub: \texttt{@chiatsewang} \quad Email: \texttt{chiatsewang@stat.sinica.edu.tw}
+\end{frame}
+
+\end{document}
