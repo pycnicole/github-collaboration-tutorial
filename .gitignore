@@ -1,2 +1,13 @@
 # macOS
 .DS_Store
+
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.nav
+*.synctex.gz
+*.snm
+*.out
+*.toc
