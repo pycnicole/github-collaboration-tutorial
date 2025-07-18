@@ -38,6 +38,5 @@ measurement made at fixed location on a regular or irregular lattice
 ## spatial point pattern
 
 consist of location in a bounded region
-123
 
 
