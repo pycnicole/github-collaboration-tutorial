@@ -10,3 +10,5 @@ account
 additional unobserved quantities
 
 ⚫ Spatial locations are used in a spatial analysis to model statistical dependence
+
+1234567  
