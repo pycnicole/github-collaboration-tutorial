@@ -1,27 +1,11 @@
 # 空間統計 Spatial Statistics
-What Is Spatial Statistics?
+空間統計是分析空間資料的統計方
 
-⚫ Data are observed or collected at spatial locations – Spatial data
-⚫ Spatial statistics is concerned with analysis of spatial data in which the set of spatial locations are taken into
+主要的想法是空間中較相近的資料通常比相離較遠的資料有較高的相似性。 
 
-account
+因此空間統計通常是透過資料間的位置關係，嘗試以統計的方法去解釋資料在空間中的變動規律性。 
 
-⚫ Data and/or locations are modeled as random, and inferences are made about these models or about
+其應用的範圍甚廣，例如 大氣、生態、環境監測、流行病學或影像處理等。 
 
-additional unobserved quantities
-
-⚫ Spatial locations are used in a spatial analysis to model statistical dependence
-
-
-% CAR (Conditional Autoregressive) 模型
-$Y_i \mid Y_{-i} \sim \mathcal{N}\left(\sum_{j \neq i} c_{ij} Y_j, \, \tau^2\right)$
-
-\mathbf{Y} \sim \mathcal{N}\left(\mathbf{0}, \, (\mathbf{I} - \rho \mathbf{W})^{-1} \tau^2 \right)
-
-% SAR (Simultaneous Autoregressive) 模型
-\mathbf{Y} = \rho \mathbf{W} \mathbf{Y} + \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}
-
-\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0}, \sigma^2 \mathbf{I})
-
-\mathbf{Y} \sim \mathcal{N}\left((\mathbf{I} - \rho \mathbf{W})^{-1} \mathbf{X}\boldsymbol{\beta}, \, \sigma^2 (\mathbf{I} - \rho \mathbf{W})^{-1} (\mathbf{I} - \rho \mathbf{W}^\top)^{-1} \right)
+舉凡收集的資料與位置有關，皆可透過空間統計的方法做相關的分析與解釋 。
 
