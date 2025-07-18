@@ -21,4 +21,22 @@ $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0}, \sigma^2 \mathbf{I})$
 
 $\mathbf{Y} \sim \mathcal{N}\left((\mathbf{I} - \rho \mathbf{W})^{-1} \mathbf{X}\boldsymbol{\beta}, \, \sigma^2 (\mathbf{I} - \rho \mathbf{W})^{-1} (\mathbf{I} - \rho \mathbf{W}^\top)^{-1} \right)$
 
+## geostastics
+
+做空間預測 找出最適合的分析方法
+
+並非所有資料平均後就會變漂亮
+
+residual用來判斷模型好不好
+
+## lattice data
+
+measurement made at fixed location on a regular or irregular lattice
+
+用途：signal detection
+
+## spatial point pattern
+
+consist of location in a bounded region
+
 
