@@ -1,6 +1,5 @@
 # 空間統計 Spatial Statistics
 
-<font color="red">**各位修過time series嗎?**</font>
 
 What Is Spatial Statistics?
 ⚫ Data are observed or collected at spatial locations – Spatial data
