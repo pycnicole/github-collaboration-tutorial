@@ -19,12 +19,16 @@
 \title[Git Tutorial]{Git \& GitHub: A Beginner's Guide for Research Collaboration}
 \author{Chiatse Wang}
 \institute[ISS AS]{Institute of Statistical Science, Academia Sinica}
-\date{April 24, 2025}
+\date{Jul 18, 2025}
 
 \begin{document}
 
 \begin{frame}
   \titlepage
+  \vfill
+  \centering
+  {\large \textit{Statistical School 2025}}
+
 \end{frame}
 
 \begin{frame}
@@ -104,7 +108,8 @@
   \begin{itemize}
     \item A \textbf{branch} represents an independent line of development starting from a specific commit.
     \item The default branch is usually named \texttt{main} or \texttt{master}.
-    \item You can create new branches to work on features or ideas without affecting the main branch.
+    \item \texttt{git checkout branch-name}: Switch to another branch.
+    \item You can create new branches to work on features or ideas without affecting the \texttt{main} branch.
   \end{itemize}
 
   \vspace{1em}
@@ -146,9 +151,6 @@
     \end{itemize}
   \end{itemize}
 \end{frame}
-
-
-
 
 \begin{comment}
 \begin{frame}{Git Commit}
@@ -292,6 +294,42 @@
     \item The maintainer will merge the PR once it is approved.
     \item Sync your fork with the latest updates from the original repository.
   \end{enumerate}
+\end{frame}
+
+\begin{frame}{Part 1: Self-Introduction}
+
+\textbf{Goal:} Practice the complete GitHub Pull Request workflow
+
+\vspace{1em}
+\begin{enumerate}
+  \setlength\itemsep{0.5em}
+  \item Open a GitHub Issue: \texttt{Add profile: yourname}
+  \item Fork the tutorial repository to your own GitHub account
+  \item Create a new branch: \texttt{yourname/feat/add-profile}
+  \item Add a self-introduction file \texttt{yourname.md} in the \texttt{profiles/} folder
+  \item Commit and push your changes; submit a Pull Request (PR)
+  \item The instructor reviews your PR and may request changes. Revise if needed and push again
+  \item Once approved, the PR is merged
+  \item Sync your fork with the original repository
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Part 2: Statistics School 2025 Knowledge Cards}
+
+\textbf{Goal:} Collaboratively contribute a knowledge card
+
+\vspace{1em}
+\begin{enumerate}
+  \setlength\itemsep{0.5em}
+  \item The class is divided into 8 groups, each assigned one course topic
+  \item Each group opens an Issue: \texttt{Add card: topic-name}
+  \item The group leader creates a branch: \texttt{groupX/feat/topic-name}
+  \item Add group members as collaborators in the forked repository
+  \item Co-edit the assigned file in \texttt{statistical-school-2025-cards/topic-name.md}
+  \item The group leader submits a PR and @mentions team members
+  \item Group members review, revise, and finalize the card
+  \item Once approved, the PR is merged and the fork is synced
+\end{enumerate}
 \end{frame}
 
 \begin{frame}{Resources}
