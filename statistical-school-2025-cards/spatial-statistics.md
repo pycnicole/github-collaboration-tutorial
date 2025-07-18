@@ -10,10 +10,10 @@
 
 > 空間統計假設：  
 > > 若兩個地點 A 與 B 非常接近，而 C 距離 A 與 B 較遠，則  
-> >```math  Cov[Z(A), Z(B)] > Cov[Z(A), Z(C)]```
+> >```Cov[Z(A), Z(B)] > Cov[Z(A), Z(C)]```
 > > 
 > > 因此：  
-> > Var[Z(A) - Z(B)] < Var[Z(A) - Z(C)]
+> > ```Var[Z(A) - Z(B)] < Var[Z(A) - Z(C)]```
 
 ---
 
