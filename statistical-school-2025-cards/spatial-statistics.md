@@ -17,15 +17,6 @@
 
 ---
 
-## 空間資料的基本類型
-
-1. **點參考資料（Point-referenced data）**  
-   - 每個位置 \( s \in D \subset \mathbb{R}^d \) 有一個隨機變數 \( Z(s) \)
-2. **區域參考資料（Area-referenced data）**  
-   - 每個區域 \( B_i \) 內的資料為 \( Z(B_i) = \frac{1}{|B_i|} \int_{B_i} Z(s) ds \)
-
----
-
 ## 空間統計的三大類型
 
 ### Geostatistics（地質統計）
